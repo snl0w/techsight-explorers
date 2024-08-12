@@ -32,5 +32,8 @@ Para abrir o site utilize este link: ...
 - Khaled Ahmed Rodrigues Marques Valdivino - [Snl0w](https://github.com/snl0w)
 - Kauan Davi Oliveira de Sá - [Kauan3005](https://github.com/Kauan3005)
 - Daniel Umberto Timóteo Damazio - [DanielSUTD](https://github.com/DanielSUTD)
+- Vinícius de Araújo Leandro Rios - [viniciusalr](https://github.com/viniciusalr)
+- João Guilherme Barroso Sales - [kovaaks](https://github.com/kovaaks)
+- Vinícius Vieira Bispo - [Vini-Bispo](https://github.com/Vini-Bispo)
 
 ## Agradecimentos
