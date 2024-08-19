@@ -1,0 +1,38 @@
+19-Aug-2024 20:27:57.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.28
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 2 2024 15:14:43 UTC
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.28.0
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-22
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           22.0.2+9-70
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\TechSightExplorers\techsight-explorers
+19-Aug-2024 20:27:57.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\Khaled\Downloads\apache-tomcat-10.1.28-windows-x64\apache-tomcat-10.1.28
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\Khaled\Downloads\apache-tomcat-10.1.28-windows-x64\apache-tomcat-10.1.28
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\TechSightExplorers\techsight-explorers
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\TechSightExplorers\techsight-explorers\temp
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\TechSightExplorers\techsight-explorers\conf\logging.properties
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=51464:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+19-Aug-2024 20:27:57.769 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+19-Aug-2024 20:27:57.777 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+19-Aug-2024 20:27:58.227 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Aug-2024 20:27:58.267 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [863] milliseconds
+19-Aug-2024 20:27:58.343 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Aug-2024 20:27:58.343 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.28]
+19-Aug-2024 20:27:58.367 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\TechSightExplorers\techsight-explorers\conf\Catalina\localhost\techsight-explorers.xml]
+19-Aug-2024 20:28:01.248 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Aug-2024 20:28:01.438 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\TechSightExplorers\techsight-explorers\conf\Catalina\localhost\techsight-explorers.xml] has finished in [3.059] ms
+19-Aug-2024 20:28:01.438 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Aug-2024 20:28:01.466 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [3195] milliseconds
+19-Aug-2024 20:28:13.454 INFO [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Aug-2024 20:28:13.458 INFO [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Aug-2024 20:28:13.477 INFO [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Aug-2024 20:28:13.498 INFO [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

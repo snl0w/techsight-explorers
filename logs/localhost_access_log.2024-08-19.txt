@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:20:28:02 -0300] "GET /techsight-explorers HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Aug/2024:20:28:02 -0300] "GET /techsight-explorers/ HTTP/1.1" 404 788
