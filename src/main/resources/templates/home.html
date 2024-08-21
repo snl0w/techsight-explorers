@@ -1,39 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
-
   <meta charset="UTF-8">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>TechSightExplorers</title>
-
+  <title>TechSight Explorers</title>
   <link rel="stylesheet" href="/css/home.css">
 </head>
 
 <body>
-<header>
-  <a href="#" class="logo"> </a>
-  <nav id="nav-bar">
-    <ul id="nav-list">
-
-      <li class="nav-item">
-        <a href="#">Início</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="#">Guias</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="#">Tutoriais</a>
-      </li>
-    </ul>
-  </nav>
+<header class="header">
+  <div class="search-bar">
+    <input type="text" placeholder="Tutoriais, Python, Java">
+    <button type="submit">&#128269;</button>
+  </div>
+  <div class="logo">
+    <img src="/images/logo.png" alt="TechSight Explorers">
+  </div>
+  <div class="icons">
+    <span><img src="/images/github-mark.png" alt="GitHub"></span>
+  </div>
 </header>
 
+<main>
+  <section class="languages">
+    <div class="language-card">
+      <img src="/images/java.png" alt="Java">
+      <button>INICIAR</button>
+    </div>
+    <div class="language-card">
+      <img src="/images/cplusplus.png" alt="C++">
+      <button>INICIAR</button>
+    </div>
+    <div class="language-card">
+      <img src="/images/php.png" alt="PHP">
+      <button>INICIAR</button>
+    </div>
+    <div class="language-card">
+      <img src="/images/python.png" alt="Python">
+      <button>INICIAR</button>
+    </div>
+    <div class="language-card">
+      <img src="/images/javascript.png" alt="JavaScript">
+      <button>INICIAR</button>
+    </div>
+  </section>
+
+  <section class="topics">
+    <div class="topic-card">
+      <span>Lógica de programação</span>
+      <button>&#10140;</button>
+    </div>
+    <div class="topic-card">
+      <span>Estrutura de Dados e Algoritmos</span>
+      <button>&#10140;</button>
+    </div>
+    <div class="topic-card">
+      <span>Inteligência Artificial</span>
+      <button>&#10140;</button>
+    </div>
+    <div class="topic-card">
+      <span>Machine Learning</span>
+      <button>&#10140;</button>
+    </div>
+    <div class="topic-card">
+      <span>MySQL</span>
+      <button>&#10140;</button>
+    </div>
+    <div class="topic-card">
+      <span>Desenvolvimento Web</span>
+      <button>&#10140;</button>
+    </div>
+  </section>
+</main>
 </body>
 
 </html>
