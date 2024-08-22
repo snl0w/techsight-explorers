@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -42,7 +41,7 @@ body {
 }
 
 .logo img {
-    height: 150px;
+    height: 130px;
 }
 
 .icons img {
@@ -96,10 +95,26 @@ body {
     width: 45%;
     margin-bottom: 20px;
     position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.topic-card img {
+    width: 700px;
+    height: auto;
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .topic-card span {
     font-size: 24px;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
 }
 
 .topic-card button {
@@ -113,4 +128,5 @@ body {
     right: 20px;
     bottom: 20px;
     cursor: pointer;
+    z-index: 2;
 }
