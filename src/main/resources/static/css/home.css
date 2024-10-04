@@ -1,0 +1,299 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ff0066;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ff0066;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.search-bar button {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 130px; /* Tamanho da logo em telas grandes */
+}
+
+.icons img {
+    width: 50px;
+    height: auto;
+}
+
+.icons span {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Estilos responsivos para dispositivos móveis (telas menores que 768px) Isso se aplica para o header, barra de pesquisa, logo da TechSight e icone do GitHub*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center;
+        padding: 10px; /* Reduz o padding do header */
+        margin: 10px;
+    }
+
+    .logo img {
+        height: 80px; /* Reduz o tamanho da logo */
+        margin-bottom: 10px; /* Adiciona um espaço abaixo da logo */
+    }
+
+    .search-bar {
+        width: 100%; /* Faz a barra de pesquisa ocupar 100% da largura */
+        margin-bottom: 10px; /* Espaço entre a barra de pesquisa e os ícones */
+    }
+
+    .search-bar input {
+        width: 80%; /* Diminui a largura da barra de pesquisa */
+        padding: 8px; /* Reduz o padding da barra de pesquisa */
+    }
+
+    .search-bar button {
+        padding: 8px; /* Reduz o tamanho do botão de busca */
+    }
+
+    .icons img {
+        width: 40px; /* Reduz o tamanho do ícone do GitHub */
+    }
+
+    .icons span {
+        margin-left: 10px; /* Reduz o espaçamento entre ícones */
+    }
+}
+
+/* Estilos para dispositivos muito pequenos (telas menores que 480px) Isso se aplica para o header, barra de pesquisa, logo da TechSight e icone do GitHub */
+@media (max-width: 480px) {
+    .header {
+        padding: 5px; /* Reduz ainda mais o padding */
+    }
+
+    .logo img {
+        height: 60px; /* Tamanho menor da logo */
+    }
+
+    .search-bar input {
+        width: 100%; /* Barra de pesquisa ocupa toda a largura da tela */
+    }
+
+    .icons img {
+        width: 30px; /* Ícone do GitHub ainda menor */
+    }
+}
+
+.title {
+    font-weight: 600;
+    margin: 25px;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.languages {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #ff0066;
+    border-radius: 10px;
+    background-color: #0c1218;
+}
+
+.language-card {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border: 2px solid #ff0066;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: 10px;
+    margin: 0 5px;
+    width: 5%;
+}
+
+.language-card img {
+    height: 80px; /* Tamanho das imagens */
+    margin-bottom: 10px;
+}
+
+.language-card button {
+    background-color: white;
+    border: 2px solid #ff0066;
+    padding: 8px 16px; /* Tamanho do botão */
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .languages {
+        flex-direction: column; /* Alterar de linha para coluna */
+        gap: 20px; /* Mais espaçamento entre as linguagens em modo coluna */
+    }
+
+    .language-card {
+        width: 90%; /* Cada cartão ocupa 50% da largura da tela */
+        margin: 0 5px; /* Centralizar os cartões */
+    }
+
+    .topics {
+        flex-direction: column; /* Alterar os tópicos para coluna em vez de linha */
+        gap: 20px; /* Aumentar o espaçamento entre os tópicos */
+    }
+
+    .topic-card {
+        width: 90%; /* Os cartões de tópicos ocupam 90% da largura da tela */
+        margin: 20px auto;
+    }
+
+    .language-card img {
+        height: 60px; /* Reduzindo o tamanho das imagens em telas menores */
+    }
+
+    .topic-card img {
+        width: 100%; /* Assegurar que a imagem ocupe toda a largura */
+    }
+
+    .topic-card button {
+        padding: 8px;
+        font-size: 16px; /* Ajustar o tamanho dos botões para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .language-card {
+        width: 100%; /* Os cartões ocupam toda a largura da tela */
+    }
+
+    .topics {
+        padding: 10px; /* Reduzir o padding em telas pequenas */
+    }
+
+    .topic-card {
+        padding: 20px; /* Reduzir o padding dos cartões */
+    }
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ff0066;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.topic-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%; /* Largura */
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.topic-card img {
+    width: 100%; /* Tamanho das imagens */
+    height: auto;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topic-card span {
+    font-size: 20px; /* Tamanho da fonte */
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.topic-card button {
+    background-color: #ff0066;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px; /* Reduzindo o tamanho do botão */
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px; /* Tamanho do botão */
+    color: black;
+}
+
+.centered-button {
+    background-color: white;
+    border: 2px solid #ff0066;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer {
+	background-color: #FFFFFF;
+	color: black;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
