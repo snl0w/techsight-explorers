@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #121212;
+    background-color: #F3EEEA;
     color: #ffffff;
 }
 
@@ -10,8 +10,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border: 2px solid #ff0066;
-    background-color: #ffffff;
+    border: 2px solid #776B5D;
+    background-color: #F3EEEA;
     color: #000000;
     border-radius: 10px;
     margin: 20px;
@@ -20,7 +20,7 @@ body {
 .search-bar {
     display: flex;
     align-items: center;
-    border: 2px solid #ff0066;
+    border: 2px solid #776B5D;
     border-radius: 20px;
     padding: 5px;
 }
@@ -116,6 +116,7 @@ body {
     margin: 25px;
     padding: 10px;
     font-size: 24px;
+    color: #000000;
 }
 
 .languages {
@@ -125,15 +126,15 @@ body {
     align-items: center;
     gap: 10px;
     padding: 10px;
-    border: 2px solid #ff0066;
+    border: 2px solid #776B5D;
     border-radius: 10px;
-    background-color: #0c1218;
+    background-color: #aba7a5;
 }
 
 .language-card {
-    background-color: #FFFFFF;
+    background-color: #EBE3D5;
     padding: 10px;
-    border: 2px solid #ff0066;
+    border: 2px solid #776B5D;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -149,12 +150,20 @@ body {
 }
 
 .language-card button {
-    background-color: white;
-    border: 2px solid #ff0066;
+    background-color: #F3EEEA;
+    border: 2px solid #776B5D;
     padding: 8px 16px; /* Tamanho do botão */
     border-radius: 5px;
     color: black;
     cursor: pointer;
+}
+
+.language-card {
+    transition: transform 0.3s ease; /* Anima a transformação de tamanho */
+}
+
+.language-card:hover {
+    transform: scale(1.1); /* Aumenta o card em 10% ao passar o mouse */
 }
 
 @media (max-width: 768px) {
@@ -212,7 +221,7 @@ body {
     justify-content: space-around;
     margin: 20px;
     padding: 20px;
-    border: 2px solid #ff0066;
+    border: 2px solid #776B5D;
     border-radius: 10px;
     background-color: #FFFFFF;
 }
@@ -246,16 +255,24 @@ body {
 }
 
 .topic-card button {
-    background-color: #ff0066;
+    background-color: #F3EEEA;
     border: none;
     padding: 8px;
     border-radius: 50%;
-    color: white;
+    color: black;
     font-size: 16px; /* Reduzindo o tamanho do botão */
     position: absolute;
     right: 10px;
     bottom: 10px;
     cursor: pointer;
+}
+
+.topic-card {
+    transition: transform 0.3s ease; /* Anima a transformação de tamanho */
+}
+
+.topic-card:hover {
+    transform: scale(1.1); /* Aumenta o card em 10% ao passar o mouse */
 }
 
 .container {
@@ -267,7 +284,7 @@ body {
 
 .centered-button {
     background-color: white;
-    border: 2px solid #ff0066;
+    border: 2px solid #776B5D;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
