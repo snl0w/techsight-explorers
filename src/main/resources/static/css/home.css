@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #F3EEEA;
+    background-color: #eae8e2;
     color: #ffffff;
 }
 
@@ -11,7 +11,7 @@ body {
     align-items: center;
     padding: 20px;
     border: 2px solid #776B5D;
-    background-color: #F3EEEA;
+    background-color: #79b4b7;
     color: #000000;
     border-radius: 10px;
     margin: 20px;
@@ -34,7 +34,7 @@ body {
 }
 
 .search-bar button {
-    background-color: #ffffff;
+    background-color: #79b4b7;
     border: none;
     outline: none;
     padding: 10px;
@@ -132,7 +132,7 @@ body {
 }
 
 .language-card {
-    background-color: #EBE3D5;
+    background-color: #ffffff;
     padding: 10px;
     border: 2px solid #776B5D;
     border-radius: 10px;
@@ -235,6 +235,11 @@ body {
     position: relative;
     overflow: hidden;
     text-align: center;
+    height: 200px;
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Adicionado */
+    justify-content: center; /* Adicionado */
+    align-items: center; /* Adicionado */
 }
 
 .topic-card img {
@@ -282,6 +287,15 @@ body {
     color: black;
 }
 
+.footer-image {
+    display: block;
+    float: left; /* Alinha a imagem à esquerda */
+    margin-right: 30px; /* Espaço entre a imagem e o texto */
+    width: 300px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+}
+
+
 .centered-button {
     background-color: white;
     border: 2px solid #776B5D;
@@ -291,11 +305,21 @@ body {
 }
 
 footer {
-	background-color: #FFFFFF;
+	background-color: #79b4b7;
 	color: black;
 	padding: 20px;
 	text-align: center;
 	margin-top: 50px;
+	overflow: hidden;
+}
+
+.about-card {
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+}
+
+.logo-about-us{
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
 }
 
 ul {
