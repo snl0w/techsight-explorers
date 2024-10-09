@@ -17,6 +17,11 @@ body {
     margin: 20px;
 }
 
+.option-nav span {
+  margin: 0 15px; /* Adiciona espaço à esquerda e à direita de cada span */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
 .search-bar {
     display: flex;
     align-items: center;
