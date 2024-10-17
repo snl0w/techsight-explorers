@@ -1,4 +1,4 @@
-# TECHSIGHT EXPLORERS
+# TECHSIGHT EXPLORERS (EM DESENVOLVIMENTO)
 
 ## Descrição
 Este projeto trata-se de um site de pesquisar e aprender sobre uma linguagem de programação.
