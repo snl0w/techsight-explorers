@@ -1,4 +1,4 @@
-package br.com.techsightexplorers;
+package br.com.tcse;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

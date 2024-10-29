@@ -1,4 +1,4 @@
-package br.com.techsightexplorers.entity;
+package br.com.tcse.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
