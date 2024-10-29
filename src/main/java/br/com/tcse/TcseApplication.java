@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TechsightExplorersApplication {
+public class TcseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TechsightExplorersApplication.class, args);
+		SpringApplication.run(TcseApplication.class, args);
 	}
 
 }
