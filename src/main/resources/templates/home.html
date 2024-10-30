@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -9,23 +9,8 @@
 </head>
 
 <body>
-<header class="header">
-  <div class="search-bar">
-    <input type="text" placeholder="Tutoriais, Python, Java">
-    <button type="submit">&#128269;</button>
-  </div>
-  <div class="logo">
-    <img src="/images/logo.png" alt="TechSight Explorers">
-  </div>
-  <div class="option-nav">
-    <span>Início</span>
-    <span>Conteúdos</span>
-    <span>Vídeos</span>
-  </div>
-  <div class="icons">
-    <span><img src="/images/github-mark.png" alt="GitHub"></span>
-  </div>
-</header>
+
+<div th:replace="/fragments/header :: header"></div>
 
 <main>
   <div class="title">
@@ -89,25 +74,10 @@
       <button>&#10140;</button>
     </div>
   </section>
-  <section>
-    <div class="footer">
-      <footer>
-        <div class="about-card">
-        <img src="images/sapiens.png" alt="imagem-ilustrativa" class="footer-image">
-        </div>
-        <div class="techsight-about-us">
-          <img src="images/logo.png" alt="logo-about-us" class="logo-about-us">
-        </div>
-        <p>&copy; 2024 - Todos os direitos reservados</p>
-        <nav>
-          <ul>
-            <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">Integrantes</a></li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
-  </section>
 </main>
+
+<footer th:replace="/fragments/footer :: footer"></footer>
 </body>
+
+
 </html>
