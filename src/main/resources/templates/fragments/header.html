@@ -2,23 +2,29 @@
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header class="header" th:fragment="header">
-    <div class="search-bar">
-        <input type="text" placeholder="Tutoriais, Python, Java">
-        <button type="submit">&#128269;</button>
+<header th:fragment="header">
+    <div class="search-box">
+        <form action="">
+            <input type="text" name="search" id="srch">
+            <button type=submit><i class='bx bx-search-alt-2'></i></button>
+        </form>
     </div>
-    <div class="logo">
-        <img src="/images/logo.png" alt="TechSight Explorers">
-    </div>
-    <div class="option-nav">
-        <span>Início</span>
-        <span>Conteúdos</span>
-        <span>Vídeos</span>
-    </div>
-    <div class="icons">
-        <span><img src="/images/github-mark.png" alt="GitHub"></span>
+
+    <img class="logo" src="/images/logo-tcse.png" alt="Logo">
+
+    <ul class="nav-bar">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Conteúdos</a></li>
+        <li><a href="#">Vídeos</a></li>
+    </ul>
+
+    <div class="user-part">
+        <a href="#" class="user"><i class='bx bx-user'></i> Entrar</a>
+        <a href="#">Cadastrar</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
     </div>
 </header>
 

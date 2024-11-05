@@ -1,119 +1,222 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+/*Tudo*/
+* {
+    box-sizing: border-box;
     margin: 0;
-    background-color: #eae8e2;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
 }
 
-.header {
+/*Variáveis CSS*/
+:root {
+    --bg-color: #FEFBF3;
+    --text-color: black;
+    --nav-color: #79b4b7;
+    --dc-color: #9D9D9D;
+    --dc-hover: #2a9ba1;
+}
+
+/*Corpo do documento HTML*/
+body {
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+/*  Barra de navegação  */
+header {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 2px solid #776B5D;
-    background-color: #79b4b7;
-    color: #000000;
-    border-radius: 10px;
-    margin: 20px;
+    background: var(--nav-color);
+    padding: 28px 12%;
+    transition: all .50s ease;
 }
 
-.option-nav span {
-  margin: 0 15px; /* Adiciona espaço à esquerda e à direita de cada span */
-  cursor: pointer;  /* Muda o cursor para indicar que é clicável */
+/*Logo da página*/
+/* .logo {
+    width: 150px;
+    height: auto;
+} */
+
+/*Barra de pesquisa */
+header .search-box {
+    position: relative;
 }
 
-.search-bar {
+/*Campo de escrita da barra de pesquisa*/
+.search-box input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: var(--bg-color);
+    border-radius: 30px;
+    color: var(--dc-color);
+    font-size: 16px;
+    text-align: center;
+}
+
+/*Botão da barra de pesquisa*/
+.search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: var(--nav-color);
+}
+
+/*Lista da barra de navegação*/
+.nav-bar {
+    display: flex;
+}
+
+/*Links da barra de navegação*/
+.nav-bar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 20px;
+    text-decoration: none;
+    transition: all .50s ease;
+}
+
+/*Links da barra de navegação*/
+.nav-bar a:hover {
+    color: var(--dc-color);
+}
+
+/*Parte do usuário(Entrar e cadastrar)*/
+.user-part {
     display: flex;
     align-items: center;
-    border: 2px solid #776B5D;
-    border-radius: 20px;
-    padding: 5px;
 }
 
-.search-bar input {
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 20px;
-    width: 300px;
+/*Parte do usuário(Links e ícone)*/
+.user-part a {
+    text-decoration: none;
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
 }
 
-.search-bar button {
-    background-color: #79b4b7;
-    border: none;
-    outline: none;
-    padding: 10px;
+/*Parte do usuário(Entrar)*/
+.user {
+    display: flex;
+    align-items: center;
+}
+
+/*ícone do usuário*/
+.user i {
+    color: var(--text-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
+/*Parte do usuário(Links e ícone)*/
+.user-part a:hover {
+    color: var(--dc-color);
+}
+
+/*Menu da responsividade*/
+#menu-icon {
+    font-size: 30px;
+    color: var(--text-color);
     cursor: pointer;
+    z-index: 1001;
+    display: none;
 }
 
-.logo img {
-    height: 130px; /* Tamanho da logo em telas grandes */
+/*  Conteúdo principal   */
+main {
+    margin-top: 150px;
 }
 
-.icons img {
-    width: 50px;
-    height: auto;
-}
+/*  Responsividade  */
 
-.icons span {
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-/* Estilos responsivos para dispositivos móveis (telas menores que 768px) Isso se aplica para o header, barra de pesquisa, logo da TechSight e icone do GitHub*/
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Alinha os itens em coluna */
-        align-items: center;
-        padding: 10px; /* Reduz o padding do header */
-        margin: 10px;
+@media (max-width: 1280px) {
+    header {
+        padding: 14px 2%;
+        transition: .2s;
     }
 
-    .logo img {
-        height: 80px; /* Reduz o tamanho da logo */
-        margin-bottom: 10px; /* Adiciona um espaço abaixo da logo */
-    }
-
-    .search-bar {
-        width: 100%; /* Faz a barra de pesquisa ocupar 100% da largura */
-        margin-bottom: 10px; /* Espaço entre a barra de pesquisa e os ícones */
-    }
-
-    .search-bar input {
-        width: 80%; /* Diminui a largura da barra de pesquisa */
-        padding: 8px; /* Reduz o padding da barra de pesquisa */
-    }
-
-    .search-bar button {
-        padding: 8px; /* Reduz o tamanho do botão de busca */
-    }
-
-    .icons img {
-        width: 40px; /* Reduz o tamanho do ícone do GitHub */
-    }
-
-    .icons span {
-        margin-left: 10px; /* Reduz o espaçamento entre ícones */
+    .nav-bar a {
+        padding: 5px 0;
+        margin: 0px 20px;
     }
 }
 
-/* Estilos para dispositivos muito pequenos (telas menores que 480px) Isso se aplica para o header, barra de pesquisa, logo da TechSight e icone do GitHub */
-@media (max-width: 480px) {
-    .header {
-        padding: 5px; /* Reduz ainda mais o padding */
+@media (max-width: 1090px) {
+    #menu-icon {
+        display: block;
     }
 
-    .logo img {
-        height: 60px; /* Tamanho menor da logo */
+    .nav-bar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--nav-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
     }
 
-    .search-bar input {
-        width: 100%; /* Barra de pesquisa ocupa toda a largura da tela */
+    .nav-bar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all 50s ease;
     }
 
-    .icons img {
-        width: 30px; /* Ícone do GitHub ainda menor */
+    .nav-bar a:hover {
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .nav-bar.open {
+        right: 2%;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .main a {
+        font-size: 14px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    user i {
+        font-size: 15px;
+        margin-right: 5px;
+    }
+}
+
 
 .title {
     font-weight: 600;
