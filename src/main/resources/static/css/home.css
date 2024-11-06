@@ -439,10 +439,10 @@ ul{
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
-	color: #ffffff;
+	color: var(--text-color);
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color: var(--text-color);
 	display: block;
 	transition: all 0.3s ease;
 }
@@ -461,7 +461,7 @@ ul{
 	text-align: center;
 	line-height: 40px;
 	border-radius: 50%;
-	color: #ffffff;
+	color: var(--text-color);
 	transition: all 0.5s ease;
 }
 
