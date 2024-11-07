@@ -478,48 +478,58 @@ ul{
 }
 
 /*Inicio Kauan*/
-
 /* Estilo para a imagem */
+/* Estilo atualizado para a imagem do Java */
 .imagem-java {
     display: block;
-    margin: 20px auto;
-    height: auto;
-    border: solid #79B4B7;
-    border-radius: 100%;
-    background-position: -15px -15px;
-    height: 195px;
-    width: 195px;
+    margin: 20px auto;         /* Centraliza a imagem horizontalmente */
+    width: 150px;              /* Define uma largura fixa para o círculo */
+    height: auto;             /* Define uma altura fixa igual à largura */
 }
+
+/* Estilo para o container da imagem */
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px; /* Ajuste a distância do header */
+}
+
 
 /* Divisão da página */
 .divisao hr {
-    width: 1440px;
+    width: 90%;
+    max-width: 1440px;
     border: 3px solid #79B4B7;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 /* Seção Explicação */
 .explicacao {
-    position: absolute;
-    width: 1343px;
-    height: 132.75px;
-    left: 61px;
-    top: 394px;
+    width: 90%;
+    max-width: 1200px;
     font-size: 20px;
     color: #000000;
     letter-spacing: 0.5px;
     text-align: center;
+    margin: 0 auto 20px;
     padding: 10px;
     box-sizing: border-box;
 }
 
+/* Container para as seções Introdução e Fundamentos */
+.section-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* Seção Introdução */
-.introducao {
-    position: absolute;
-    width: 524px;
-    height: 371px;
-    left: 130px;
-    top: 590px;
+.introducao, .fundamentos {
+    width: 45%;
     background: #FFFFFF;
     border: 4px solid #79B4B7;
     border-radius: 28px;
@@ -527,44 +537,25 @@ ul{
     box-sizing: border-box;
 }
 
-.introducao h2 {
+.introducao h2, .fundamentos h2 {
     font-size: 24px;
     color: #000000;
     margin-bottom: 10px;
 }
 
-.introducao .topico {
+.introducao .topico, .fundamentos .topico {
     font-size: 20px;
     color: #000000;
     letter-spacing: 0.5px;
     margin-bottom: 10px;
 }
+/* Wrapper para o conteúdo principal */
+.wrapper {
+    flex: 1;
+}
 
-/* Seção Fundamentos do Java */
 .fundamentos {
-    position: absolute;
-    width: 524px;
-    height: 371px;
-    right: 126px;
-    top: 590px;
-    background: #FFFFFF;
-    border: 4px solid #79B4B7;
-    border-radius: 28px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.fundamentos h2 {
-    font-size: 24px;
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.fundamentos .topico {
-    font-size: 20px;
-    color: #000000;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
+    margin-bottom: 40px; /* Ajuste o valor conforme necessário */
 }
 /*Fim Kauan*/
 /*Inicio Vinicius Bispo*/

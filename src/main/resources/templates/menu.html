@@ -11,35 +11,41 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <body>
 
-<div th:replace="~{/fragments/header :: header}"></div>
+<div class="wrapper">
+  <div th:replace="~{/fragments/header :: header}"></div>
 
-<img src="/images/Java.png" alt="Java" class="imagem-java">
+  <div class="imagem-container">
+    <img src="/images/Java.png" alt="Java" class="imagem-java">
+  </div>
 
 
-<div class="explicacao">
-  Aqui, você aprenderá Java do zero, começando com os fundamentos como sintaxe, estruturas condicionais, loops, arrays.
-  À medida que avança, exploraremos conceitos mais complexos, como classes, herança, interfaces e polimorfismo,
-  que são pilares da Programação Orientada a Objetos (POO) em Java.
-</div>
+  <div class="explicacao">
+    Aqui, você aprenderá Java do zero, começando com os fundamentos como sintaxe, estruturas condicionais, loops, arrays.
+    À medida que avança, exploraremos conceitos mais complexos, como classes, herança, interfaces e polimorfismo,
+    que são pilares da Programação Orientada a Objetos (POO) em Java.
+  </div>
 
-<div class="divisao"><hr></div>
+  <div class="divisao"><hr></div>
 
-<div class="introducao">
-  <h2>1. Introdução</h2>
-  <div class="topico">1.1 História (Java)</div>
-  <div class="topico">1.2 Instalação do Java</div>
-  <div class="topico">1.3 Instalação da IDE Eclipse</div>
-  <div class="topico">1.4 Estrutura de código</div>
-  <div class="topico">1.5 Hello World</div>
-</div>
+  <div class="section-container">
+    <div class="introducao">
+      <h2>1. Introdução</h2>
+      <div class="topico">1.1 História (Java)</div>
+      <div class="topico">1.2 Instalação do Java</div>
+      <div class="topico">1.3 Instalação da IDE Eclipse</div>
+      <div class="topico">1.4 Estrutura de código</div>
+      <div class="topico">1.5 Hello World</div>
+    </div>
 
-<div class="fundamentos">
-  <h2>2. Fundamentos do Java</h2>
-  <div class="topico">2.1 Variáveis</div>
-  <div class="topico">2.2 Operadores (Atribuição, Aritméticos, Relacionais, Lógicos)</div>
-  <div class="topico">2.3 Estrutura Condicional</div>
-  <div class="topico">2.4 Estrutura de Repetição</div>
-  <div class="topico">2.5 Arrays (Vetores e Matrizes)</div>
+    <div class="fundamentos">
+      <h2>2. Fundamentos do Java</h2>
+      <div class="topico">2.1 Variáveis</div>
+      <div class="topico">2.2 Operadores (Atribuição, Aritméticos, Relacionais, Lógicos)</div>
+      <div class="topico">2.3 Estrutura Condicional</div>
+      <div class="topico">2.4 Estrutura de Repetição</div>
+      <div class="topico">2.5 Arrays (Vetores e Matrizes)</div>
+    </div>
+  </div>
 </div>
 
 <div th:replace="~{/fragments/footer :: footer}"></div>
