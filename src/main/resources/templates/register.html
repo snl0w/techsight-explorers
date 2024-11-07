@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
+
+<div th:replace="~{/fragments/header :: header}"></div>
     <div class="container">
-        <header class="header">
-            <img src="img/logo.png" alt="">
-        </header>
 
         <div class="form-container">
             <h1>Criar Conta</h1>
@@ -31,5 +33,9 @@
             </form>
         </div>
     </div>
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+<!--JS LINK-->
+<script src="/js/script.js"></script>
 </body>
 </html>

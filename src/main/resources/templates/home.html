@@ -13,7 +13,7 @@
 
 <body>
 
-<div th:replace="/fragments/header :: header"></div>
+<div th:replace="~{/fragments/header :: header}"></div>
 
 <main>
   <div class="title">
@@ -22,7 +22,7 @@
   <section class="languages">
     <div class="language-card">
       <img src="/images/Java.png" alt="Java">
-      <button onclick="window.location.href='java-tutorial.html'">INICIAR</button>
+      <button onclick="window.location.href='/java-tutorial'">INICIAR</button>
     </div>
     <div class="language-card">
       <img src="/images/c++.png" alt="C++">
@@ -79,7 +79,9 @@
   </section>
 </main>
 
-<footer th:replace="/fragments/footer :: footer"></footer>
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+
 <!--JS LINK-->
 <script src="/js/script.js"></script>
 </body>

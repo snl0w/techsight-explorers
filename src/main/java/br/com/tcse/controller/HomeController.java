@@ -14,4 +14,19 @@ public class HomeController {
         return "home";
     }
 
+    @GetMapping("/java-tutorial")
+    public String javaTutorial() {
+        return "menu";
+    }
+
+    @GetMapping("/register")
+    public String register() {
+        return "register";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
 }
