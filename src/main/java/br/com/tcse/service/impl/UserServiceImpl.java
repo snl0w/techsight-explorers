@@ -51,7 +51,6 @@ public class UserServiceImpl implements UserService {
 
         user.setUsername(updatedUser.getUsername());
         user.setEmail(updatedUser.getEmail());
-        user.setBiography(updatedUser.getBiography());
 
         User updatedUserObj = userRepository.save(user);
 
