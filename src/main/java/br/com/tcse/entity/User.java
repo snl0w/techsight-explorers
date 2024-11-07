@@ -27,10 +27,4 @@ public class User {
 
     @Column(name = "PASSWORD", length = 255, nullable = false)
     private String password;
-
-    @Column(name = "PROFILE_PICTURE", length = 255)
-    private String profilePicture;
-
-    @Column(name = "BIOGRAPHY", columnDefinition = "TEXT")
-    private String biography;
 }
