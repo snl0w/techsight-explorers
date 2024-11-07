@@ -18,6 +18,6 @@ public class Role {
     @Column(name = "ID_ROLE")
     private Long id;
 
-    @Column(name = "ID_ROLE")
+    @Column(name = "NAME", length = 100, nullable = false)
     private String name;
 }
