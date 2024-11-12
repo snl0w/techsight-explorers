@@ -9,12 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
-<body>
-
+<body class="register-page">
 <div th:replace="~{/fragments/header :: header}"></div>
-    <div class="container">
+    <div class="container-register">
 
-        <div class="form-container">
+        <div class="form-container-register">
             <h1>Criar Conta</h1>
             <form action="#" method="POST">
                 <label for="username">Nome do Usuário</label>
@@ -29,7 +28,7 @@
                 <label for="confirm-password">Confirmar senha</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha">
 
-                <button type="submit">Inscrever-se</button>
+                <button class="button-register" type="submit">Inscrever-se</button>
             </form>
         </div>
     </div>
