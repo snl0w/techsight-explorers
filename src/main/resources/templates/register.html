@@ -15,15 +15,15 @@
 
         <div class="form-container-register">
             <h1>Criar Conta</h1>
-            <form action="#" method="POST">
+            <form method="post" role="form" th:action="@{/register}" th:object="${user}">
                 <label for="username">Nome do Usuário</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu nome">
+                <input th:field="*{username}" type="text" id="username" name="username" placeholder="Digite seu nome">
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                <input th:field="*{email}" type="email" id="email" name="email" placeholder="Digite seu e-mail">
 
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha">
+                <input th:field="*{password}" type="password" id="password" name="password" placeholder="Digite sua senha">
 
                 <label for="confirm-password">Confirmar senha</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha">
