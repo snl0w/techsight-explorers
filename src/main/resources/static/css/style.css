@@ -395,86 +395,106 @@ ul{
 	list-style: none;
 }
 
-.footer{
-	background-color: var(--nav-color);
+.footer {
+    background-color: var(--nav-color);
     padding: 70px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do footer */
 }
 
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-
-.footer-col h4{
-	font-size: 18px;
-	color: var(--text-color);
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: var(--dc-color);
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
-
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: var(--text-color);
-	text-decoration: none;
-	font-weight: 300;
-	color: var(--text-color);
-	display: block;
-	transition: all 0.3s ease;
-}
-
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: var(--text-color);
-	transition: all 0.5s ease;
-}
-
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
-}
-
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-
-@media(max-width: 574px){
-  .footer-col{
+.footer .container {
+    max-width: 1200px;
     width: 100%;
 }
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: var(--text-color);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    background-color: var(--dc-color);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--text-color);
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/* Responsivo */
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 /*Inicio Kauan*/
@@ -559,57 +579,97 @@ ul{
 }
 /*Fim Kauan*/
 /*Inicio Vinicius Bispo*/
-.redefinir-container { /*caixa de Redefinição de Senha*/
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    flex-direction: column;
+}
+
+.login-page .login-container {
     background-color: #fff;
-    padding: 80px;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.315);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     width: 100%;
-    max-width: 800px;
+    max-width: 400px;
     text-align: center;
+    margin-top: 180px; /* Para evitar sobreposição com o header */
+    margin-bottom: 170px; /* Empurra o footer para baixo */
 }
+
 h1 {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
-label { /*escritas "Nova Senha" e "Confirmar Senha" acima das caixas*/
+
+label {
     display: block;
     text-align: left;
-    margin: 10px 0 5px 140px;
+    margin: 15px 0 5px;
+    font-size: 14px;
+    color: #555;
 }
+
+input[type="email"],
 input[type="password"] {
-    width: 500px;
-    padding: 10px; /*Distância do conteúdo da caixa e suas bordas*/
-    margin-top: 10px; /* Espaçamento entre os campos de senha*/
-    margin-bottom: 30px;
-    border: 2px solid #ccc; /* Borda da caixa de preenchimento*/
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
-a { /*Links cadastrar-se e esqueceu a senha*/
-    color: #7B7A7A;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
+
 .forgot-password {
     display: block;
     text-align: right;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #7B7A7A;
+    text-decoration: none;
 }
-.buttonRedefinir { /*Botão Redefinir Senha*/
-    background-color: rgba(121, 180, 183, 1);
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    background-color: #79b4b7;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 120px;
     text-decoration: none;
-    display: block;
-    margin: 20px auto 0;
+    font-size: 16px;
+    margin-top: 10px;
 }
-.buttonRedefinir:hover {
-    background-color: rgb(71, 107, 109);
+
+.button:hover {
+    background-color: #476b6d;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #79b4b7;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
 }
 /*Fim Vinicius Bispo*/
 /*Inicio Vinicius de Araujo*/
