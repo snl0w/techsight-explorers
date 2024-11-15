@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Integrantes - TechSight Explorers</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Página de Cadastro</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="TechSight Explorers Logo">
-    </div>
-    <h1>INTEGRANTES</h1>
-  </header>
-  
-  <main>
+<body class="integrantes-page">
+<div th:replace="~{/fragments/header :: header}"></div>
+  <main class="main-integrantes">
     <div class="team-container">
       <div class="member-card">
         <div class="photo"></div>
@@ -28,7 +25,7 @@
       <div class="member-card">
         <div class="photo"></div>
         <h2>Daniel Umberto</h2>
-        <div class="icons">
+        <div class="icons-integrantes">
           <img src="images/icon1.png" alt="Icon 1">
           <img src="images/icon2.png" alt="Icon 2">
           <img src="images/icon3.png" alt="Icon 3">
@@ -72,5 +69,9 @@
       </div>
     </div>
   </main>
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+<!--JS LINK-->
+<script src="/js/script.js"></script>
 </body>
 </html>

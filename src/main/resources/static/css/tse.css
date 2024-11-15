@@ -28,7 +28,7 @@
     height: auto;
   }
   
-  main {
+  .main-integrantes {
     display: flex;
     justify-content: center;
     padding: 40px;
@@ -63,13 +63,13 @@
     margin: 10px 0;
   }
   
-  .icons {
+  .icons-integrantes {
     display: flex;
     justify-content: center;
     gap: 8px;
   }
   
-  .icons img {
+  .icons-integrantes img {
     width: 20px;
     height: 20px;
   }

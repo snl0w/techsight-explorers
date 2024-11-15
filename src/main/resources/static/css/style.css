@@ -778,3 +778,54 @@ input {
 }
 
 /*Fim João Guilherme*/
+/*Inicio Vinicius de Araujo*/
+  .main-integrantes {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 100px;
+  }
+
+  .member-card {
+    background-color: #ffffff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 150px;
+  }
+
+  .member-card .photo {
+    width: 100px;
+    height: 100px;
+    background-color: #f3f3f3;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+  }
+
+  .member-card h2 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .icons-integrantes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .icons-integrantes img {
+    width: 20px;
+    height: 20px;
+  }
+/*Fim Vinicius de Araujo*/
+/*Inicio redefinir senha*/
+
+/*Fim redefinir senha*/
