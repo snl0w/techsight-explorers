@@ -1,4 +1,4 @@
-package br.com.tcse.entity;
+package br.com.tcse.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,7 +12,7 @@ import lombok.*;
 @Entity
 @Table(name = "USERS")
 
-public class User {
+public class UserBlog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,4 +27,7 @@ public class User {
 
     @Column(name = "PASSWORD", length = 255, nullable = false)
     private String password;
+
+    @Column(name = "ROLES", nullable = false)
+    private String role;
 }

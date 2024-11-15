@@ -19,11 +19,6 @@ public class HomeController {
         return "menu";
     }
 
-    @GetMapping("/register")
-    public String register() {
-        return "register";
-    }
-
     @GetMapping("/login")
     public String login() {
         return "login";
