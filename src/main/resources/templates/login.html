@@ -13,15 +13,15 @@
     <div th:replace="~{/fragments/header :: header}"></div>
     <div class="login-container">
         <h1>Login</h1>
-        <form method="post" role="form" th:action="@{/login}" th:object="${user}">
+        <form action="/login" method="post">
             <label for="email">E-mail</label>
-            <input th:field="*{email}" type="email" name="email" placeholder="example@email.com" required>
+            <input type="email" name="email" placeholder="example@email.com" required>
             <label for="senha">Senha</label>
-            <input th:field="*{password}" type="password" name="password" placeholder="senha" required>
-            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            <input type="password" name="password" placeholder="senha" required>
+            <a href="/forgotPassword" class="forgot-password">Esqueceu a senha?</a>
             <a href="/" class="button">Entrar</a>
         </form>
-        <p>Não possui cadastro? <a href="#">Cadastrar-se</a></p>
+        <p>Não possui cadastro? <a href="/register">Cadastrar-se</a></p>
     </div>
     <div th:replace="~{/fragments/footer :: footer}"></div>
     <!--JS LINK-->

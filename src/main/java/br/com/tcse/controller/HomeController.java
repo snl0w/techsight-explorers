@@ -14,7 +14,7 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/java-tutorial")
+    @GetMapping("/menu")
     public String javaTutorial() {
         return "menu";
     }
@@ -27,6 +27,16 @@ public class HomeController {
     @GetMapping("/login")
     public String login() {
         return "login";
+    }
+
+    @GetMapping("/forgotPassword")
+    public String forgotPassword() {
+        return "redefinir-senha";
+    }
+
+    @GetMapping("/members")
+    public String members() {
+        return "tse";
     }
 
 }
