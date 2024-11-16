@@ -15,19 +15,23 @@
   <title>Redefinição de Senha - TSE</title>
   <link rel="stylesheet" href="redefinir-senha.css">
 </head>
-<body>
+<body class="redefinir-page">
 <div th:replace="/fragments/header :: header"></div>
 <div class="redefinir-container">
-  <h1>Redefinição de Senha</h1>
+  <h1 class="redefinir-h1">Redefinição de Senha</h1>
   <form action="/redefinir-senha" method="post">
     <input type="hidden" name="token" value="<!-- token de redefinição -->">
-    <label for="nova-senha">Nova senha</label>
-    <input type="password" id="nova-senha" name="nova-senha" placeholder="Nova Senha" required>
+    <label class="confirmarSenhaLabel" for="nova-senha">Nova senha</label>
+    <input type="passwordRedefinir" id="nova-senha" name="nova-senha" placeholder="Nova Senha" required>
 
-    <label for="confirmar-senha">Confirmar Senha</label>
-    <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar Senha" required>
+    <label class="confirmarSenhaLabel" for="confirmar-senha">Confirmar Senha</label>
+    <input type="passwordRedefinir" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar Senha" required>
     <a href="#" class="buttonRedefinir">Redefinir Senha</a>
   </form>
 </div>
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+<!--JS LINK-->
+<script src="/js/script.js"></script>
 </body>
 </html>

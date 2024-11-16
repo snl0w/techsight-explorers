@@ -640,7 +640,7 @@ input[type="password"] {
     text-decoration: underline;
 }
 
-.button {
+.buttonEntrar {
     display: inline-block;
     background-color: #79b4b7;
     color: white;
@@ -653,7 +653,7 @@ input[type="password"] {
     margin-top: 10px;
 }
 
-.button:hover {
+.buttonEntrar:hover {
     background-color: #476b6d;
 }
 
@@ -827,5 +827,67 @@ input {
   }
 /*Fim Vinicius de Araujo*/
 /*Inicio redefinir senha*/
+.redefinir-page {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 100px;
+}
 
+.redefinir-container { /*caixa de Redefinição de Senha*/
+    background-color: #fff;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.315);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 170px;
+    margin-top: 170px;
+}
+.redefinir-h1 {
+    margin-bottom: 80px;
+}
+.confirmarSenhaLabel { /*escritas "Nova Senha" e "Confirmar Senha" acima das caixas*/
+    display: block;
+    text-align: center;
+}
+input[type="passwordRedefinir"] {
+    width: 500px;
+    padding: 10px; /*Distância do conteúdo da caixa e suas bordas*/
+    margin-top: 10px; /* Espaçamento entre os campos de senha*/
+    margin-bottom: 30px;
+    border: 2px solid #ccc; /* Borda da caixa de preenchimento*/
+    border-radius: 5px;
+}
+a { /*Links cadastrar-se e esqueceu a senha*/
+    color: #7B7A7A;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 50px;
+}
+.buttonRedefinir { /*Botão Redefinir Senha*/
+    background-color: rgba(121, 180, 183, 1);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto 0;
+}
+.button:hover {
+    background-color: rgb(71, 107, 109);
+}
 /*Fim redefinir senha*/
