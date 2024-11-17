@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -16,28 +15,33 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
-       return httpSecurity
-               .authorizeHttpRequests( auth -> auth
-                       .requestMatchers("/").permitAll()
-                       .requestMatchers("/css/*").permitAll()
-                       .requestMatchers("/images/*").permitAll()
-                       .requestMatchers("/js/*").permitAll()
-                       .requestMatchers("/menu").permitAll()
-                       .requestMatchers("/login").permitAll()
-                       .requestMatchers("/register").permitAll()
-                       .requestMatchers("/forgotPassword").permitAll()
-                       .requestMatchers("/members").permitAll()
-                       .anyRequest().authenticated()
-               )
-               .formLogin(form -> form
-                       .loginPage("/login") // Indica sua página personalizada de login
-                       .defaultSuccessUrl("/", true) // Página para redirecionar após login bem-sucedido
-                       .permitAll() // Permite acesso à página de login sem autenticação
-               )
-               .logout(config -> config.logoutSuccessUrl("/"))
-               .build();
-   }
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf((csrf) -> csrf.disable())
+                .authorizeHttpRequests((requests) -> requests
+                        // Rotas públicas
+                        .requestMatchers("/css/**", "/js/**", "/images/**" ,"/home", "/menu", "/members").permitAll()
+                        .requestMatchers("/register/**").permitAll()
+                        .requestMatchers("/login/**").permitAll()
+                        // Rotas com autenticação específica
+                        .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/admin/**").hasAnyRole("ADMIN")
+                        // Qualquer outra rota precisa de autenticação
+                        .anyRequest().authenticated()
+                )
+                .formLogin((form) -> form
+                        .loginPage("/login")
+                        .loginProcessingUrl("/login")
+                        .defaultSuccessUrl("/home", true)
+                        .permitAll()
+                )
+                .logout((logout) -> logout.permitAll())
+                .exceptionHandling((exceptions) -> exceptions
+                        .accessDeniedHandler((request, response, accessDeniedException) -> {
+                            response.sendRedirect("/access-denied");
+                        })
+                );
+        return http.build();
+    }
 
     @Bean
     public static PasswordEncoder passwordEncoder() {

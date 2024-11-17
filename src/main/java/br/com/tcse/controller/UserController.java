@@ -1,24 +1,17 @@
 package br.com.tcse.controller;
 
 import br.com.tcse.dto.UserDto;
+import br.com.tcse.model.UserBlog;
 import br.com.tcse.repository.UserRepository;
-import lombok.AllArgsConstructor;
+import br.com.tcse.service.UserService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-@AllArgsConstructor
-@RestController
-@RequestMapping("/api/users")
+@Controller
 public class UserController {
-
-    private UserRepository userRepository;
-
-    @GetMapping("/register")
-    public String register(Model model){
-        UserDto registerDto = new UserDto();
-        model.addAttribute(registerDto);
-        return "register";
-    }
-
 
 }

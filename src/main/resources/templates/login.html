@@ -8,20 +8,32 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
 <body class="login-page">
     <div th:replace="~{/fragments/header :: header}"></div>
     <div class="login-container">
         <h1>Login</h1>
-        <form action="/login" method="post">
+
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">Email ou Senha inválido!!!</div>
+        </div>
+
+        <div th:if="${param.logout}">
+            <div class="alert alert-success">Você está desconectado!!!</div>
+        </div>
+
+        <form method="post"
+              role="form"
+              th:action="@{/login}">
             <label for="email">E-mail</label>
             <input type="email" name="email" placeholder="example@email.com" required>
             <label for="senha">Senha</label>
             <input type="password" name="password" placeholder="12345" required>
-            <a href="/forgotPassword" class="forgot-password">Esqueceu a senha?</a>
-            <a href="/" class="buttonEntrar">Entrar</a>
+            <a th:href="@{/forgotPassword}" class="forgot-password">Esqueceu a senha?</a>
+            <a th:href="@{/home}" class="buttonEntrar">Entrar</a>
         </form>
-        <p>Não possui cadastro? <a href="/register">Cadastrar-se</a></p>
+        <p>Não possui cadastro? <a th:href="@{/register}">Cadastrar-se</a></p>
     </div>
     <div th:replace="~{/fragments/footer :: footer}"></div>
     <!--JS LINK-->

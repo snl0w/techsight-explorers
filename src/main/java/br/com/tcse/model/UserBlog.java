@@ -14,17 +14,23 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-public class UserBlog{
+public class UserBlog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
     @Column(nullable = false)
     private String username;
+
     @Column(nullable = false, unique = true)
     private String email;
+
     @Column(nullable = false)
     private String password;
+
+    // Relacionamento Many-to-Many com a entidade Role
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "users_roles",
@@ -33,6 +39,7 @@ public class UserBlog{
     )
     private List<Role> roles = new ArrayList<>();
 
+    // Construtor alternativo que inicializa o usuário com username, email, password e roles
     public UserBlog(String username, String email, String password, List<Role> roles) {
         this.username = username;
         this.email = email;
