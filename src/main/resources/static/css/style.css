@@ -671,7 +671,7 @@ p a:hover {
     text-decoration: underline;
 }
 /*Fim Vinicius Bispo*/
-/*Inicio Vinicius de Araujo*/
+/*Inicio Vinicius de Araujo (Página de Integrantes)*/
 .team-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -687,14 +687,14 @@ p a:hover {
     max-width: 150px;
   }
 
-  .member-card .photo {
-    width: 100px;
-    height: 100px;
-    background-color: #f3f3f3;
-    border: 2px solid #333;
-    border-radius: 10px;
-    margin: 0 auto 10px;
-  }
+.member-card .photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+  object-fit: cover; /* Garante que a imagem fique ajustada no espaço */
+  border: 2px solid #333;
+}
 
   .member-card h2 {
     font-size: 16px;
