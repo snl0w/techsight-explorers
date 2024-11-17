@@ -1,15 +1,10 @@
 package br.com.tcse.controller;
 
-import br.com.tcse.dto.RegisterDto;
+import br.com.tcse.dto.UserDto;
 import br.com.tcse.repository.UserRepository;
-import br.com.tcse.service.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @AllArgsConstructor
 @RestController
@@ -20,7 +15,7 @@ public class UserController {
 
     @GetMapping("/register")
     public String register(Model model){
-        RegisterDto registerDto = new RegisterDto();
+        UserDto registerDto = new UserDto();
         model.addAttribute(registerDto);
         return "register";
     }
