@@ -15,6 +15,11 @@
 
         <div class="form-container-register">
             <h1>Criar Conta</h1>
+
+            <div th:if="${param.success}" class=" alert alert-info">
+                Registrado com sucesso!
+            </div>
+
             <form method="post" th:action="@{/register}" th:object="${user}">
                 <label for="username">Nome do Usuário</label>
                 <input type="text" id="username" th:field="*{username}" placeholder="Digite seu nome">
