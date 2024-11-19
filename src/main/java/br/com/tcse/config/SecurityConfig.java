@@ -11,30 +11,42 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
 public class SecurityConfig {
+
+    @Bean
+    public static PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf((csrf) -> csrf.disable())
                 .authorizeHttpRequests((requests) -> requests
-                        // Rotas públicas
-                        .requestMatchers("/css/**", "/js/**", "/images/**" ,"/home", "/menu", "/members").permitAll()
+                        // Rotas públicas para arquivos estáticos
+                        .requestMatchers("/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
+                        .requestMatchers("/home", "/menu", "/members").permitAll()
                         .requestMatchers("/register/**").permitAll()
                         .requestMatchers("/login/**").permitAll()
-                        // Rotas com autenticação específica
+                        // Rotas protegidas
                         .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-                        .requestMatchers("/admin/**").hasAnyRole("ADMIN")
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
                         // Qualquer outra rota precisa de autenticação
                         .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form
                         .loginPage("/login")
                         .loginProcessingUrl("/login")
-                        .defaultSuccessUrl("/home", true)
+                        .usernameParameter("email")
+                        .passwordParameter("password")
+                        .defaultSuccessUrl("/home")
+                        .failureUrl("/login?error")
                         .permitAll()
                 )
-                .logout((logout) -> logout.permitAll())
+                .logout((logout) -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/login?logout")
+                        .permitAll()
+                )
                 .exceptionHandling((exceptions) -> exceptions
                         .accessDeniedHandler((request, response, accessDeniedException) -> {
                             response.sendRedirect("/access-denied");
@@ -43,8 +55,4 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public static PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
 }

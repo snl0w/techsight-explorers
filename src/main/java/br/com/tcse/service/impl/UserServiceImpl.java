@@ -2,7 +2,7 @@ package br.com.tcse.service.impl;
 
 import br.com.tcse.dto.UserDto;
 import br.com.tcse.model.Role;
-import br.com.tcse.model.UserBlog;
+import br.com.tcse.model.User;
 import br.com.tcse.repository.RoleRepository;
 import br.com.tcse.repository.UserRepository;
 import br.com.tcse.service.UserService;
@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
             role = roleRepository.save(new Role(TbConstants.Roles.USER));
 
         // Cria um novo usuário com os dados do UserDto, criptografa a senha e associa o papel 'USER'
-        UserBlog user = new UserBlog(userDto.getUsername(), userDto.getEmail(), passwordEncoder.encode(userDto.getPassword()),
+        User user = new User(userDto.getUsername(), userDto.getEmail(), passwordEncoder.encode(userDto.getPassword()),
                 Arrays.asList(role));
 
 
@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
 
     // Método para buscar um usuário no banco de dados pelo e-mail
     @Override
-    public UserBlog findUserByEmail(String email) {
+    public User findUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 }

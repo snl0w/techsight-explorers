@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-public class UserBlog {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +40,7 @@ public class UserBlog {
     private List<Role> roles = new ArrayList<>();
 
     // Construtor alternativo que inicializa o usuário com username, email, password e roles
-    public UserBlog(String username, String email, String password, List<Role> roles) {
+    public User(String username, String email, String password, List<Role> roles) {
         this.username = username;
         this.email = email;
         this.password = password;

@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
-import br.com.tcse.model.UserBlog;
 
 @Getter
 @Setter
@@ -25,7 +24,7 @@ public class Role {
     private String name; // Nome da role (ex: "ADMIN", "USER")
 
     @ManyToMany(mappedBy = "roles")
-    private List<UserBlog> users = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 
     // Construtor alternativo que inicializa apenas o nome da role
     public Role(String name) {

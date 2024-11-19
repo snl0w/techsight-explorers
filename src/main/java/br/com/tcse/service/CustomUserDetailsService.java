@@ -1,6 +1,6 @@
 package br.com.tcse.service;
 
-import br.com.tcse.model.UserBlog;
+import br.com.tcse.model.User;
 import br.com.tcse.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,7 +20,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         // Busca o usuário no banco de dados pelo e-mail
-        UserBlog user = userRepository.findByEmail(email);
+        User user = userRepository.findByEmail(email);
 
         // Se o usuário for encontrado, cria e retorna um objeto UserDetails
         if (user != null) {
