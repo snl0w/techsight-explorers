@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     // Método para exibir a página inicial no endpoint /home
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("message", "Bem-vindo ao meu site!");
         return "home";

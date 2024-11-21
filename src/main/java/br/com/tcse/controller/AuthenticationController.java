@@ -40,20 +40,6 @@ public class AuthenticationController {
             BindingResult result,
             Model model) {
 
-        // Verifica se algum campo obrigatório está vazio
-        if (userDto.getUsername() == null || userDto.getUsername().trim().isEmpty()) {
-            result.rejectValue("username", null, "O nome de usuário é obrigatório!"); // Adiciona um erro de validação
-        }
-        if (userDto.getEmail() == null || userDto.getEmail().trim().isEmpty()) {
-            result.rejectValue("email", null, "O email é obrigatório!");
-        }
-        if (userDto.getPassword() == null || userDto.getPassword().trim().isEmpty()) {
-            result.rejectValue("password", null, "A senha é obrigatória!");
-        }
-        if (userDto.getConfirmPassword() == null || userDto.getConfirmPassword().trim().isEmpty()) {
-            result.rejectValue("confirmPassword", null, "A confirmação de senha é obrigatória!");
-        }
-
         // Verifica se o e-mail já está registrado no banco de dados
         if (!result.hasFieldErrors("email") && userService.findUserByEmail(userDto.getEmail()) != null) {
             result.rejectValue("email", null, "Esse email já está registrado!");

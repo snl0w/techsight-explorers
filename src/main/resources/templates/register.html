@@ -22,19 +22,19 @@
 
             <form method="post" th:action="@{/register}" th:object="${user}">
                 <label for="username">Nome do Usuário</label>
-                <input type="text" id="username" th:field="*{username}" placeholder="Digite seu nome">
+                <input type="text" id="username" th:field="*{username}" placeholder="Digite seu nome" required>
                 <p class="text-danger" th:errors="*{username}"></p>
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" th:field="*{email}" placeholder="Digite seu e-mail">
+                <input type="email" id="email" th:field="*{email}" placeholder="Digite seu e-mail" required>
                 <p class="text-danger" th:errors="*{email}"></p>
 
                 <label for="password">Senha</label>
-                <input type="password" id="password" th:field="*{password}" placeholder="Digite sua senha">
+                <input type="password" id="password" th:field="*{password}" placeholder="Digite sua senha" required>
                 <p class="text-danger" th:errors="*{password}"></p>
 
                 <label for="confirm-password">Confirmar senha</label>
-                <input type="password" id="confirm-password" th:field="*{confirmPassword}" placeholder="Confirme sua senha">
+                <input type="password" id="confirm-password" th:field="*{confirmPassword}" placeholder="Confirme sua senha" required>
                 <p class="text-danger" th:errors="*{confirmPassword}"></p>
 
                 <button class="button-register" type="submit">Inscrever-se</button>
