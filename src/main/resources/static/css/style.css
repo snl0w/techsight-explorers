@@ -94,40 +94,35 @@ header .search-box {
     color: var(--dc-color);
 }
 
-/*Parte do usuário(Entrar e cadastrar)*/
+/* Parte do usuário (Entrar e Cadastrar) */
 .user-part {
-    display: flex;
-    align-items: center;
+    display: flex; /* Garante alinhamento horizontal dos itens */
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 20px; /* Espaçamento entre os itens "Entrar" e "Cadastrar" */
 }
 
-/*Parte do usuário(Links e ícone)*/
+/* Parte do usuário (Links e ícone) */
 .user-part a {
     text-decoration: none;
-    margin-right: 25px;
-    margin-left: 10px;
     color: var(--text-color);
     font-size: 1.1rem;
     font-weight: 500;
-    transition: all .50s ease;
-}
-
-/*Parte do usuário(Entrar)*/
-.user {
-    display: flex;
+    display: flex; /* Garante alinhamento do ícone e texto */
     align-items: center;
+    gap: 5px; /* Espaçamento entre o ícone e o texto "Entrar" */
 }
 
-/*ícone do usuário*/
+/* Ícone do usuário */
 .user i {
-    color: var(--text-color);
     font-size: 28px;
-    margin-right: 7px;
+    color: var(--text-color);
 }
 
-/*Parte do usuário(Links e ícone)*/
+/* Parte do usuário (Hover nos links) */
 .user-part a:hover {
     color: var(--dc-color);
 }
+
 
 /*Menu da responsividade*/
 #menu-icon {

@@ -21,13 +21,14 @@
     </ul>
 
     <div class="user-part">
-        <!-- Caso o usuário NÃO esteja logado -->
-        <div th:if="${#authorization.expression('isAnonymous()')}">
-            <a href="/login" class="user"><i class='bx bx-user'></i> Entrar</a>
-            <a href="/register">Cadastrar</a>
-        </div>
+        <a href="/login" class="user">
+            <i class='bx bx-user'></i> Entrar
+        </a>
+        <a href="/register">Cadastrar</a>
+    </div>
 
-        <!-- Caso o usuário esteja logado -->
+
+    <!-- Caso o usuário esteja logado -->
         <div th:if="${#authorization.expression('isAuthenticated()')}">
             <!-- Imagem do usuário + Link para sua página  -->
 
