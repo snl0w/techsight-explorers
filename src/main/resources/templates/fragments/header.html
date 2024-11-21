@@ -29,7 +29,10 @@
 
         <!-- Caso o usuário esteja logado -->
         <div th:if="${#authorization.expression('isAuthenticated()')}">
-            <a href="/logout" class="logout">Logout</a>
+            <!-- Imagem do usuário + Link para sua página  -->
+
+            <!-- Sair da conta -->
+            <a href="/logout" class="logout"><i class='bx bx-exit'></i></a>
         </div>
 
         <div class="bx bx-menu" id="menu-icon"></div>
