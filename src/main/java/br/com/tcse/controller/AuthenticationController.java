@@ -1,6 +1,5 @@
 package br.com.tcse.controller;
 
-
 import br.com.tcse.dto.UserDto;
 import br.com.tcse.service.UserService;
 import jakarta.validation.Valid;
@@ -14,8 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class LoginController {
-
+public class AuthenticationController {
     // Injeta o serviço de usuários para manipulação de dados do usuário
     @Autowired
     private UserService userService;

@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -19,12 +20,13 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf((csrf) -> csrf.disable())
-                .authorizeHttpRequests((requests) -> requests
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .csrf(csrf -> csrf.disable()) // CSRF desativado
+                .authorizeHttpRequests(auth -> auth
                         // Rotas públicas para arquivos estáticos
-                        .requestMatchers("/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
                         .requestMatchers("/home", "/menu", "/members").permitAll()
+                        .requestMatchers("/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
                         .requestMatchers("/register/**").permitAll()
                         .requestMatchers("/login/**").permitAll()
                         // Rotas protegidas
@@ -33,25 +35,17 @@ public class SecurityConfig {
                         // Qualquer outra rota precisa de autenticação
                         .anyRequest().authenticated()
                 )
-                .formLogin((form) -> form
+                .formLogin(form -> form
                         .loginPage("/login")
                         .loginProcessingUrl("/login")
-                        .usernameParameter("email")
-                        .passwordParameter("password")
-                        .defaultSuccessUrl("/home")
-                        .failureUrl("/login?error")
+                        .defaultSuccessUrl("/home", true)
                         .permitAll()
                 )
-                .logout((logout) -> logout
-                        .logoutUrl("/logout")
-                        .logoutSuccessUrl("/login?logout")
+                .logout(logout -> logout
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                         .permitAll()
-                )
-                .exceptionHandling((exceptions) -> exceptions
-                        .accessDeniedHandler((request, response, accessDeniedException) -> {
-                            response.sendRedirect("/access-denied");
-                        })
                 );
+
         return http.build();
     }
 

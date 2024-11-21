@@ -21,8 +21,17 @@
     </ul>
 
     <div class="user-part">
-        <a href="/login" class="user"><i class='bx bx-user'></i> Entrar</a>
-        <a href="/register">Cadastrar</a>
+        <!-- Caso o usuário NÃO esteja logado -->
+        <div th:if="${#authorization.expression('isAnonymous()')}">
+            <a href="/login" class="user"><i class='bx bx-user'></i> Entrar</a>
+            <a href="/register">Cadastrar</a>
+        </div>
+
+        <!-- Caso o usuário esteja logado -->
+        <div th:if="${#authorization.expression('isAuthenticated()')}">
+            <a href="/logout" class="logout">Logout</a>
+        </div>
+
         <div class="bx bx-menu" id="menu-icon"></div>
     </div>
 </header>

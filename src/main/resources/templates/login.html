@@ -26,8 +26,8 @@
         <form method="post"
               role="form"
               th:action="@{/login}">
-            <label for="email">E-mail</label>
-            <input id="email" type="email" name="email" placeholder="example@email.com" required>
+            <label>E-mail</label>
+            <input type="email" id="username" name="username" placeholder="example@email.com" required>
             <label for="password">Senha</label>
             <input id="password" type="password" name="password" placeholder="12345" required>
             <a th:href="@{/forgotPassword}" class="forgot-password">Esqueceu a senha?</a>

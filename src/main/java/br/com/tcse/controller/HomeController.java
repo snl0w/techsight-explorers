@@ -1,5 +1,6 @@
 package br.com.tcse.controller;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,6 @@ public class HomeController {
     // Método para exibir o menu no endpoint /menu
     @GetMapping("/menu")
     public String javaTutorial() {
-
         return "menu";
     }
 
@@ -26,5 +26,4 @@ public class HomeController {
     public String members() {
         return "members"; // Retorna a view correspondente à página de membros
     }
-
 }
