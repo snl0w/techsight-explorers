@@ -19,7 +19,13 @@ public class HomeController {
     // Método para exibir o menu no endpoint /menu
     @GetMapping("/menu")
     public String javaTutorial() {
+
         return "menu";
+    }
+
+    @GetMapping("/java-history")
+    public String javaHistory() {
+        return "java-history";
     }
 
     // Método para exibir a página de membros no endpoint /members

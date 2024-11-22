@@ -1,0 +1,79 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Java</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<div th:replace="~{/fragments/header :: header}"></div>
+
+<!-- Main Content -->
+<main>
+    <section class="content">
+        <h1>História do Java</h1>
+        <div class="page-division"></div>
+        <article>
+            <h2>1. Introdução</h2>
+            <p>
+                Java é uma linguagem de programação orientada a objetos, projetada para ser
+                independente de plataforma, o que significa que o código compilado pode ser
+                executado em qualquer sistema que suporte Java.
+            </p>
+            <p>
+                Criada por James Gosling na Sun Microsystems e lançada em 1995, Java se tornou
+                popular para o desenvolvimento de aplicativos de desktop, web e móveis devido à
+                sua simplicidade, robustez e segurança.
+            </p>
+            <p>
+                A história de Java começou em 1991, quando a equipe da Sun Microsystems
+                desenvolveu a linguagem inicialmente chamada de "Oak", renomeada para "Java" em
+                1996.
+            </p>
+            <p>
+                Ao longo dos anos, Java evoluiu, incluindo a introdução do Java 2, que trouxe
+                configurações para diferentes plataformas. Em 2006, a Sun Microsystems liberou
+                a maior parte da JVM como software livre.
+            </p>
+        </article>
+        <article>
+            <h2>2. Aplicações do Java</h2>
+            <p>
+                Java possui vários recursos-chave, como independência de plataforma, orientação
+                a objetos, simplicidade, robustez, segurança, suporte a multithreading,
+                portabilidade e alto desempenho.
+            </p>
+            <p>
+                O código Java é escrito em um editor ou IDE, compilado em bytecode pelo
+                compilador Java, e executado pela JVM em qualquer plataforma.
+            </p>
+            <p>
+                As principais vantagens de Java incluem sua independência de plataforma, forte
+                suporte à programação orientada a objetos, segurança e uma grande comunidade de
+                desenvolvedores.
+            </p>
+            <p>
+                No entanto, Java pode ser mais lento que outras linguagens como C++, devido ao
+                uso de uma máquina virtual e ao gerenciamento automático de memória, o que
+                também pode resultar em maior uso de memória.
+            </p>
+        </article>
+    </section>
+    <div class="buttons">
+        <a href="/menu" >Menu</a>
+        <a href="#" >1.2 Instalação do Java</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+<!--JS LINK-->
+<script src="/js/script.js"></script>
+
+</body>
+</html>

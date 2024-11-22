@@ -25,7 +25,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // CSRF desativado
                 .authorizeHttpRequests(auth -> auth
                         // Rotas públicas para arquivos estáticos
-                        .requestMatchers("/", "/menu", "/members").permitAll()
+                        .requestMatchers("/", "/menu", "/members", "/java-history").permitAll()
                         .requestMatchers("/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
                         .requestMatchers("/register/**").permitAll()
                         .requestMatchers("/login/**").permitAll()
