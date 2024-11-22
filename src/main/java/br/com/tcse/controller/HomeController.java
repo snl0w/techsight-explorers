@@ -19,7 +19,6 @@ public class HomeController {
     // Método para exibir o menu no endpoint /menu
     @GetMapping("/menu")
     public String javaTutorial() {
-
         return "menu";
     }
 

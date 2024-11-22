@@ -26,7 +26,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Rotas públicas para arquivos estáticos
                         .requestMatchers("/", "/menu", "/members", "/java-history").permitAll()
+                        //Arquivos STATIC
                         .requestMatchers("/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
+                        //Permissões para login e registro
                         .requestMatchers("/register/**").permitAll()
                         .requestMatchers("/login/**").permitAll()
                         // Rotas protegidas

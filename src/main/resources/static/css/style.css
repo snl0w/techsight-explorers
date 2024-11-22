@@ -769,7 +769,21 @@ input {
 }
 
 .button-register:hover {
-    background-color: #68a199;
+   background-color: #68a199;
+}
+
+/*  Mensagem de erro */
+.text-danger {
+    color: #e74c3c; /* Vermelho vibrante */
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: #fdecea; /* Fundo sutil em tom rosado */
+    border: 1px solid #f5c6cb; /* Bordas suaves */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 8px; /* Espaçamento interno */
+    margin-top: 5px; /* Espaçamento superior */
+    display: inline-block; /* Ajusta o tamanho ao conteúdo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
 }
 
 /*Fim João Guilherme*/
@@ -820,6 +834,8 @@ input {
     width: 20px;
     height: 20px;
   }
+
+
 /*Fim Vinicius de Araujo*/
 /*Inicio redefinir senha*/
 .redefinir-page {
