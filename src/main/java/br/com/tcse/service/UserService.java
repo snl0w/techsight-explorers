@@ -12,4 +12,6 @@ public interface UserService {
 
     // Método para encontrar um usuário pelo seu e-mail, retornando um objeto UserBlog que representa o usuário no banco de dados
     User findUserByEmail(String email);
+
+    User findUserByUsername(String username);
 }

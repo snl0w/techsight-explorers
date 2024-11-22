@@ -45,6 +45,11 @@ public class AuthenticationController {
             result.rejectValue("email", null, "Esse email já está registrado!");
         }
 
+        // Verifica se o nome de usuário já está registrado no banco de dados
+        if (!result.hasFieldErrors("username") && userService.findUserByUsername(userDto.getUsername()) != null) {
+            result.rejectValue("username", null, "Esse nome de usuário já está em uso!");
+        }
+
         // Compara a senha e a confirmação de senha
         if (!result.hasFieldErrors("password") && !result.hasFieldErrors("confirmPassword") &&
                 !userDto.getPassword().equals(userDto.getConfirmPassword())) {
