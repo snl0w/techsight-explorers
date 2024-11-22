@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,20 +23,18 @@
     </ul>
 
 
-    <div class="user-part">
-        <a href="/login" class="user">
-            <i class='bx bx-user'></i> Entrar
-        </a>
+    <div class="user-part" sec:authorize="!isAuthenticated()">
+        <a href="/login" class="user"><i class='bx bx-user'></i> Entrar</a>
         <a href="/register">Cadastrar</a>
     </div>
 
-    <!-- Caso o usuário esteja logado -->
-        <div th:if="${#authorization.expression('isAuthenticated()')}">
-            <!-- Imagem do usuário + Link para sua página  -->
-
-            <!-- Sair da conta -->
-            <a href="/logout" class="logout"><i class='bx bx-exit'></i></a>
-        </div>
+    <!-- Caso o usuário esteja autenticado -->
+    <div class="user-part" sec:authorize="isAuthenticated()">
+        <!-- Link para sair da conta -->
+        <a th:href="@{/logout}" class="logout">
+            <i class='bx bx-exit'></i>SAIR
+        </a>
+    </div>
 
         <div class="bx bx-menu" id="menu-icon"></div>
     </div>

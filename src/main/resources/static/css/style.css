@@ -967,6 +967,11 @@ a:hover {
     background: var(--dc-hover);
 }
 
+.bx-exit {
+    font-size: 25px;
+    color: var(--text-color);
+}
+
 /* Responsividade */
 
 /* FIM java-history */
