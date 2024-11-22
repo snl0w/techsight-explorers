@@ -32,34 +32,19 @@ public class AuthenticationController {
         return "register";
     }
 
-    //OBS: Tem muitos ifs, não é uma boa prática
-    // Método para processar o registro de novos usuários no endpoint /register
     @PostMapping("/register")
     public String registration(
             @Valid @ModelAttribute("user") UserDto userDto,
             BindingResult result,
             Model model) {
 
-        // Verifica se o e-mail já está registrado no banco de dados
-        if (!result.hasFieldErrors("email") && userService.findUserByEmail(userDto.getEmail()) != null) {
-            result.rejectValue("email", null, "Esse email já está registrado!");
-        }
-
-        // Verifica se o nome de usuário já está registrado no banco de dados
-        if (!result.hasFieldErrors("username") && userService.findUserByUsername(userDto.getUsername()) != null) {
-            result.rejectValue("username", null, "Esse nome de usuário já está em uso!");
-        }
-
-        // Compara a senha e a confirmação de senha
-        if (!result.hasFieldErrors("password") && !result.hasFieldErrors("confirmPassword") &&
-                !userDto.getPassword().equals(userDto.getConfirmPassword())) {
-            result.rejectValue("confirmPassword", null, "As senhas não são iguais!");
-        }
+        // Realiza todas as validações com o serviço
+        userService.validarRegistro(userDto, result);
 
         // Verifica se existem erros de validação
         if (result.hasErrors()) {
-            model.addAttribute("user", userDto); // Adiciona o DTO de volta ao modelo para exibir os erros
-            return "register"; // Retorna à página de registro com as mensagens de erro
+            model.addAttribute("user", userDto);
+            return "register";
         }
 
         // Salva o novo usuário no banco de dados
