@@ -27,6 +27,11 @@ public class HomeController {
         return "java-history";
     }
 
+    @GetMapping("/java-install")
+    public String javaInstall() {
+        return "java-install";
+    }
+
     // Método para exibir a página de membros no endpoint /members
     @GetMapping("/members")
     public String members() {

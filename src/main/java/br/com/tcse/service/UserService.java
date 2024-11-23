@@ -5,6 +5,8 @@ import br.com.tcse.model.User; // Importa a classe de modelo que representa o us
 import org.springframework.stereotype.Service; // Importa a anotação Service para indicar que essa classe é um serviço de negócio
 import org.springframework.validation.BindingResult;
 
+import java.util.List;
+
 // A interface UserService define os métodos que o serviço de usuário deve implementar. Ela é usada para encapsular a lógica de negócios relacionada a usuários.
 @Service // Anotação que marca esta interface como um serviço, indicando que pode ser injetada e utilizada em outros componentes do Spring
 public interface UserService {

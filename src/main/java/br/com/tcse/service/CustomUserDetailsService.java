@@ -34,7 +34,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                     .collect(Collectors.toList())); // Coleta as autoridades em uma lista
         } else {
             // Se o usuário não for encontrado, lança uma exceção com uma mensagem de erro
-            throw new UsernameNotFoundException("Invalid email or password");
+            throw new UsernameNotFoundException("Email ou senha inválida");
         }
     }
 }

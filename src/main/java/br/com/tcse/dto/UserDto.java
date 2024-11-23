@@ -1,5 +1,6 @@
 package br.com.tcse.dto;
 
+import br.com.tcse.model.User;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;

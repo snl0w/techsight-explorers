@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Instalação do Java</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<div th:replace="~{/fragments/header :: header}"></div>
+
+<main>
+    <section class="content">
+        <h1>Download de JDK em Java</h1>
+        <div class="page-division"></div>
+        <div class="content-video">
+            <!-- LINK DO VÍDEO -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kqujFS7xKYw?si=WnlQrnuVpYckfu2S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="document">
+            <a href="/files/InstalarJava.pdf" download="meu_documento.pdf">Download do PDF Explicativo</a>
+        </div>
+
+    </section>
+
+
+    <div class="buttons">
+        <a href="/java-history" >1.1 História do Java</a>
+        <a href="#" >1.3 Instalação do Eclipse</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+<!--JS LINK-->
+<script src="/js/script.js"></script>
+
+</body>
+</html>

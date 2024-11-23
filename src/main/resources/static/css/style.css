@@ -991,3 +991,33 @@ a:hover {
 /* Responsividade */
 
 /* FIM java-history */
+
+
+/* INICIO java-install  */
+/*Vídeo do conteúdo*/
+.content-video {
+    margin-bottom: 20px;
+}
+
+/*Pdf do documento explicativo*/
+.document {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px 100px;
+    background: var(--dc-color);
+}
+
+/*Link do pdf explicativo*/
+.document a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .50s ease;
+}
+
+/*Link do pdf explicativo*/
+.document a:hover {
+    color: rgb(75, 73, 73);
+}
+
