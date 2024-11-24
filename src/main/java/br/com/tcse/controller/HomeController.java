@@ -22,14 +22,22 @@ public class HomeController {
         return "menu";
     }
 
+    //Link para Blog
     @GetMapping("/java-history")
     public String javaHistory() {
         return "java-history";
     }
 
+    //Link para Blog
     @GetMapping("/java-install")
     public String javaInstall() {
         return "java-install";
+    }
+
+    //Link para Blog
+    @GetMapping("/eclipse-install")
+    public String eclipseInstall() {
+        return "eclipse-install";
     }
 
     // Método para exibir a página de membros no endpoint /members
