@@ -42,8 +42,14 @@ public class HomeController {
 
     //Link para Blog
     @GetMapping("/code-structure")
-    public String codestructure() {
+    public String codeStructure() {
         return "code-structure";
+    }
+
+    //Link para Blog
+    @GetMapping("/hello-world")
+    public String helloWorld() {
+        return "hello-world";
     }
 
 

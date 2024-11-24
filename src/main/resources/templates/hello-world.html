@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrutura de código</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+<main>
+
+    <!-- Header -->
+    <div th:replace="~{/fragments/header :: header}"></div>
+
+    <section class="content">
+        <div class="code-section">
+            <h2>"Hello World"</h2>
+            <p>
+                Este é o programa mais básico que você pode escrever em Java, e é frequentemente usado
+                como um primeiro exemplo ao aprender a linguagem.
+            </p>
+            <div class="code-block">
+                <code>
+                    public class HelloWorld {
+                      public static void main(String[] args) {
+                        System.out.println("Hello, World!");
+                      }
+                    }
+                </code>
+            </div>
+        </div>
+
+        <article>
+            <h2>Comentários</h2>
+            <p>
+                São trechos de código que são ignorados pelo compilador e não afetam a execução do
+                programa. Eles são usados principalmente para explicar o código, tornando-o mais legível para
+                outros desenvolvedores (ou para você mesmo no futuro). Java suporta três tipos de
+                comentários:
+            </p>
+            <p>
+                1. Comentários de Linha Única
+                Comentários de linha única começam com //. Tudo que segue após // até o fim da
+                linha é ignorado pelo compilador.
+                Exemplo: // Este é um comentário de linha única
+            </p>
+            <p>
+                2. Comentários de Múltiplas Linhas
+                Comentários de múltiplas linhas começam com /* e terminam com */. Tudo entre
+                esses delimitadores é ignorado pelo compilador, mesmo que se estenda por várias
+                linhas.
+                Exemplo: /* Este é um comentário de múltiplas linhas. Ele pode ser usado para explicar
+                trechos mais complexos de código ou para adicionar informações detalhadas. */
+
+            </p>
+            <p>
+                3. Comentários de Documentação (Javadoc)
+                Os comentários de documentação começam com /** e terminam com */. Eles são
+                usados para gerar automaticamente a documentação do código usando a ferramenta
+                Javadoc. Dentro desse tipo de comentário, você pode usar tags especiais para organizar
+                a documentação.
+            </p>
+        </article>
+    </section>
+
+    <div class="buttons">
+        <a href="/code-structure">1.4 Estrutura de código</a>
+        <a href="/menu">Fundamentos do Java</a>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+<!--JS LINK-->
+<script src="/js/script.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>
