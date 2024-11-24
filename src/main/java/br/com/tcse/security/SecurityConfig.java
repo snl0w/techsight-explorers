@@ -27,9 +27,10 @@ public class SecurityConfig {
                         .requestMatchers("/", "/members").permitAll()
                         //Arquivos STATIC
                         .requestMatchers("/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
-                        //Permissões para login e registro
+                        //Permissões para login, registro e esqueceu a senha
                         .requestMatchers("/register/**").permitAll()
                         .requestMatchers("/login/**").permitAll()
+                        .requestMatchers("/send-email/**").permitAll()
                         // Rotas protegidas
                         .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/admin/**").hasRole("ADMIN")

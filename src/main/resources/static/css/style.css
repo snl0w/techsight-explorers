@@ -1110,3 +1110,93 @@ code {
         font-size: 14px; /* Reduz o tamanho da fonte para melhor encaixe */
     }
 }
+
+/*   TELA SEND-EMAIL   */
+/* Página de Redefinição de Senha */
+.email-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    flex-direction: column;
+}
+
+.email-page .email-container{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 180px; /* Para evitar sobreposição com o header */
+    margin-bottom: 170px; /* Empurra o footer para baixo */
+}
+
+/* Título */
+.email-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo do rótulo */
+.email-container label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilo do campo de entrada */
+.email-container input[type="email"] {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+}
+
+/* Estilo do botão */
+.email-container button {
+    display: inline-block;
+    background-color: #79b4b7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Efeito de hover para o botão */
+.email-container button:hover {
+    background-color: #476b6d;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .email-container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    .email-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .email-container input[type="email"],
+    .email-container button {
+        font-size: 0.9rem;
+    }
+}
+
+/*  FIM TELA SEND-EMAIL   */

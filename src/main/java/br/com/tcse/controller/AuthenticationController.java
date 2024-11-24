@@ -55,4 +55,9 @@ public class AuthenticationController {
     }
 
     // Método de exemplo para funcionalidade "Esqueceu a Senha" (a implementar)
+    //Método para exibir a página send-email
+    @GetMapping("/send-email")
+    public String sendEmail() {
+        return "send-email";
+    }
 }
