@@ -1073,6 +1073,16 @@ a:hover {
 
 /*  INÍCIO PÁGINAS DE ESTRUTURA DE CÓDIGO  */
 /*  Div do código */
+
+/* Estilo geral para todas as seções de código */
+.code-section {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 800px; /* Define uma largura máxima consistente */
+    margin: 20px auto; /* Centraliza a seção na página */
+    padding: 15px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui bordas e padding na largura */
+}
+
 .code-block {
     background-color: var(--dc-color);
     width: 100%;
