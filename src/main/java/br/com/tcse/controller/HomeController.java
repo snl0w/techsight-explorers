@@ -40,6 +40,13 @@ public class HomeController {
         return "eclipse-install";
     }
 
+    //Link para Blog
+    @GetMapping("/code-structure")
+    public String codestructure() {
+        return "code-structure";
+    }
+
+
     // Método para exibir a página de membros no endpoint /members
     @GetMapping("/members")
     public String members() {

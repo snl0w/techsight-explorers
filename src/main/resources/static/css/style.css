@@ -905,7 +905,7 @@ a:hover {
 /*Fim redefinir senha*/
 
 
-/* java-history */
+/* PÁGINA DE CONTEÚDO */
 /*Seção do conteúdo*/
 .content {
     display: flex;
@@ -990,10 +990,10 @@ a:hover {
 
 /* Responsividade */
 
-/* FIM java-history */
+/* FIM PÁGINA DE CONTEÚDO */
 
 
-/* INICIO java-install  */
+/* INICIO PÁGINA DE VÍDEO  */
 /*Vídeo do conteúdo*/
 .content-video {
     margin-bottom: 20px;
@@ -1021,3 +1021,35 @@ a:hover {
     color: rgb(75, 73, 73);
 }
 
+/* FIM PÁGINA DE VÍDEO  */
+
+
+/*  INÍCIO PÁGINAS DE ESTRUTURA DE CÓDIGO  */
+/*  Div do código */
+.code-block {
+    background-color: var(--dc-color);
+    width: 100%;
+    max-width: 800px; /* Limita a largura máxima em telas maiores */
+    padding: 15px;
+    border: 1px solid var(--bg-color);
+    border-radius: 8px;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .code-block {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px; /* Reduz o tamanho da fonte para melhor encaixe */
+    }
+}
