@@ -1030,6 +1030,21 @@ a:hover {
     background: var(--dc-hover);
 }
 
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    .buttons {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .buttons a {
+        font-size: 14px; /* Reduz tamanho da fonte */
+        width: auto; /* Ajusta largura automaticamente */
+        padding: 8px 15px; /* Reduz padding */
+        margin: 5px; /* Reduz margem */
+    }
+}
+
 .bx-exit {
     font-size: 25px;
     color: var(--text-color);
