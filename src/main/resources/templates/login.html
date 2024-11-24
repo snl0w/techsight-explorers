@@ -17,11 +17,11 @@
         <h1>Login</h1>
 
         <div th:if="${param.error}">
-            <div class="alert alert-danger">Email ou Senha inválido!!!</div>
+            <div class="alert alert-danger">Email ou Senha inválido!</div>
         </div>
 
         <div th:if="${param.logout}">
-            <div class="alert alert-success">Você está desconectado!!!</div>
+            <div class="alert alert-success">Você está desconectado!</div>
         </div>
 
         <form method="post"

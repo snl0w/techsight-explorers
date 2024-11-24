@@ -665,6 +665,9 @@ p a {
 p a:hover {
     text-decoration: underline;
 }
+
+
+
 /*Fim Vinicius Bispo*/
 /*Inicio Vinicius de Araujo (Página de Integrantes)*/
 .team-container {
@@ -706,6 +709,50 @@ p a:hover {
     width: 20px;
     height: 20px;
   }
+
+  /* Mensagem de sucesso */
+  .alert-success {
+      color: var(--nav-color); /* Vermelho vibrante */
+      font-weight: bold;
+      font-size: 0.9rem;
+      background-color: #d4edda; /* Fundo sutil em tom esverdeado */
+      border: 1px solid #c3e6cb; /* Bordas suaves */
+      border-radius: 5px; /* Cantos arredondados */
+      padding: 8px; /* Espaçamento interno */
+      margin-top: 5px; /* Espaçamento superior */
+      display: inline-block; /* Ajusta o tamanho ao conteúdo */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  }
+
+  /* Mensagem de informação */
+  .alert-info {
+      color: var(--nav-color); /* Vermelho vibrante */
+      font-weight: bold;
+      font-size: 0.9rem;
+      background-color: #d1ecf1; /* Fundo sutil em tom azulado */
+      border: 1px solid #bee5eb; /* Bordas suaves */
+      border-radius: 5px; /* Cantos arredondados */
+      padding: 8px; /* Espaçamento interno */
+      margin-top: 5px; /* Espaçamento superior */
+      display: inline-block; /* Ajusta o tamanho ao conteúdo */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  }
+
+  /* Mensagem de erro */
+  .alert-danger {
+      color: #e74c3c; /* Vermelho vibrante */
+      font-weight: bold;
+      font-size: 0.9rem;
+      background-color: #fdecea; /* Fundo sutil em tom rosado */
+      border: 1px solid #f5c6cb; /* Bordas suaves */
+      border-radius: 5px; /* Cantos arredondados */
+      padding: 8px; /* Espaçamento interno */
+      margin-top: 5px; /* Espaçamento superior */
+      display: inline-block; /* Ajusta o tamanho ao conteúdo */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  }
+
+
 /*Fim Vinicius de Araujo*/
 /*Início João Guilherme*/
 .register-page {
@@ -773,7 +820,7 @@ input {
 }
 
 /*  Mensagem de erro */
-.text-danger {
+.text-danger{
     color: #e74c3c; /* Vermelho vibrante */
     font-weight: bold;
     font-size: 0.9rem;
