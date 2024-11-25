@@ -38,9 +38,11 @@ Para abrir o site utilize este link: ...
 - Spring Security
 - Thymeleaf
 - Java Mail
+- PostgreSQL
+- Jakarta
 
 ## Licença
-
+- Em desenvolvimento
 
 ## Autores
 - Khaled Ahmed Rodrigues Marques Valdivino - [Snl0w](https://github.com/snl0w)
