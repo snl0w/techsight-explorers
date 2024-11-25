@@ -16,14 +16,28 @@ Este projeto trata-se de um site de pesquisar e aprender sobre uma linguagem de 
 Para abrir o site utilize este link: ...
 
 ## Uso
-1.
+1. Clicar em "Cadastrar".
+2. Inserir suas informações e clicar em "Inscrever-se".
+3. Clicar em "Entrar".
+4. Inserir as informações e clicar em "Entrar".
+5. Após isso clicar em "Iniciar" no card de Java.
+6. Iniciar os estudos.
 
 
 ## Funcionalidades
-- 
+- Cadastro de usuário
+- Login
+
 
 ## Tecnologias Utilizadas
-- 
+- Java
+- HTML
+- CSS
+- JavaScript
+- Spring Boot
+- Spring Security
+- Thymeleaf
+- Java Mail
 
 ## Licença
 
