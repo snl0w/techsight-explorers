@@ -51,4 +51,4 @@ Para abrir o site utilize este link: ...
 - Vinícius Vieira Bispo - [Vini-Bispo](https://github.com/Vini-Bispo)
 
 ## Agradecimentos
-- Lucas Henrique [Lhgs-pog](https://github.com/Lhgs-pog)
+- Lucas Henrique - [Lhgs-pog](https://github.com/Lhgs-pog)
