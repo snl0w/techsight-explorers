@@ -56,4 +56,11 @@ public class BlogController {
     public String members() {
         return "members"; // Retorna a view correspondente à página de membros
     }
+
+    //Quem somos?
+    @GetMapping("/tcse-history")
+    public String tcseHistory() {
+        return "tcse-history";
+    }
+
 }

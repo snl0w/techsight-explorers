@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Java</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+<div th:replace="~{/fragments/header :: header}"></div>
+
+<!-- Main Content -->
+<main>
+    <section class="content">
+        <h1>TechSightExplorers</h1>
+        <div class="page-division"></div>
+        <article>
+            <h2>Quem somos?</h2>
+            <p>
+                O TechSight Explorers é uma plataforma criada para auxiliar brasileiros interessados
+                em ingressar na área de Tecnologia da Informação (TI). Nosso objetivo é oferecer
+                conteúdo acessível e de alta qualidade em português, focando em tecnologias essenciais
+                do mercado, como Java e Python. Com trilhas de aprendizado intuitivas e práticas,
+                disponibilizamos tutoriais, vídeos, artigos e exercícios que atendem desde iniciantes
+                até quem busca avançar na carreira. Diante da crescente demanda por profissionais de TI no Brasil,
+                nosso compromisso é proporcionar uma experiência de aprendizado
+                que prepare nossos usuários para o mercado.
+            </p>
+        </article>
+    </section>
+</main>
+
+<!-- Footer -->
+<div th:replace="~{/fragments/footer :: footer}"></div>
+
+<!--JS LINK-->
+<script src="/js/script.js"></script>
+
+</body>
+</html>
