@@ -24,7 +24,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // CSRF desativado
                 .authorizeHttpRequests(auth -> auth
                         // Rotas públicas para arquivos padrões
-                        .requestMatchers("/", "/members").permitAll()
+                        .requestMatchers("/", "/members", "/tcse-history").permitAll()
                         //Arquivos STATIC
                         .requestMatchers("/css/**", "/js/**", "/images/**", "/favicon.ico").permitAll()
                         //Permissões para login, registro e esqueceu a senha
